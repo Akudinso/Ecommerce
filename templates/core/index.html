@@ -86,7 +86,7 @@
                     data-wow-delay="0.1s">
                     <div class="shop-card">
                         <div class="dz-media">
-                            <img src="{% static 'images/shop/product/1.png' %}" alt="image">
+                            <img src="{{product.image.url}}" alt="image">
                             <div class="shop-meta">
                                 <a href="javascript:void(0);" class="btn btn-secondary btn-icon" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal">
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <div class="dz-content">
-                            <h5 class="title"><a href="shop-list.html">Wooden Water Bottles</a></h5>
+                            <h5 class="title"><a href="shop-list.html">{{product.name}}</a></h5>
                             <ul class="star-rating">
                                 <li>
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -174,8 +174,8 @@
                                 </li>
                             </ul>
                             <h6 class="price">
-                                <del>$45.00</del>
-                                $40.00
+                                <!-- <del>$45.00</del> -->
+                                #{{product.price}}
                             </h6>
                         </div>
                         <div class="product-tag">
